@@ -1,0 +1,79 @@
+.cards_div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h2{
+        font-size: 36px;
+    }
+    .cards_title_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            display: flex;
+            align-items: center;
+            gap: 16.5px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #606060;
+            padding: 10px;
+            p{
+                font-size: 16px;
+            }
+            svg{
+                font-size: 16px;
+                transition: 0.3s ease all;
+            }
+            &:hover p{
+                margin-right: 10px;
+            }
+            &:hover svg{
+                margin-right: -10px;
+            }
+        }
+    }
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .cards_div{
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(3,minmax(0,1fr));
+            }   
+    }
+}
+@media screen and (max-width: 768px){
+    .cards_div{ 
+        gap: 32px;
+            h2{
+                font-size: 24px;
+            }
+            .cards{
+                gap: 32px;
+            }        
+    }   
+}
+
+@media screen and (max-width: 650px){
+    .cards_div{
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(2,minmax(0,1fr));
+            }   
+    }
+}
+@media screen and (max-width: 450px){
+    .cards_div{
+        gap: 12px;
+            .cards{
+                gap: 12px;
+            }   
+    }
+}

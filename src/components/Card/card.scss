@@ -1,0 +1,200 @@
+.card_div{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 100%;
+
+    .img_div{
+        text-align: center;
+        position: relative;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .card_like_button{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px;
+            background-color: rgba(243, 242, 241,0.5);
+            border-radius: 4px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+
+            svg{
+                font-size: 26px;
+                position: relative;
+                color: rgba(0, 0, 0, 0.4);
+                font-weight: 400;
+            }
+
+            .liked_button{
+                color: #FF6633;
+            }
+
+            &:hover svg{
+                color: #FF6633;
+            }
+        }
+
+        p{
+            position: absolute;
+            left: 15px;
+            bottom: 18px;
+            background: #FF6633;
+            border-radius: 4px;
+            padding: 4px 8px;
+            color: white;
+        }
+    }
+    p{
+        font-size: 16px;
+        line-height: 150%;
+        color: #414141;
+    }
+    &:hover{
+        box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+    }
+}
+.card_body{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    .cost_type{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div{
+        div:first-child{
+            text-align: left; 
+        }
+        div:last-child{
+        text-align: right;
+        }
+    }
+
+    h4{
+        font-size: 18px;
+        margin-bottom: -5px;
+    }
+
+    .h4{
+        margin-bottom: -5px;
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 25px;
+    }
+
+    span{
+        font-size: 12px;
+        line-height: 150%;
+        color: #BFBFBF;
+    }
+}
+.card_body_main{
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+
+    .card_footer{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        font-size: 16px;
+        color: #70C05B;
+        background-color: transparent;
+        width: 100%;
+        border: 1px solid #70C05B;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #FF6633;
+            border: 1px solid #FF6633;
+            color: white;
+        }
+    }
+
+    p{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:only-child{
+            margin-bottom: 20px !important;
+            color: red;
+        }
+    }
+
+    .rated_div{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .card_div:last-child{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 1200px){
+    .card_div:nth-child(4){
+        display: none;
+    }
+}
+@media screen and (max-width: 650px){
+    .card_div:nth-child(4){
+        display: flex;
+    }
+}
+@media screen and (max-width: 450px){
+    .img_div {
+
+        p{
+            font-size: 12px;
+            left:8px !important;
+        }
+
+        .card_like_button{
+            top:8px !important;
+            right: 8px !important;
+        }
+    }
+    .card_body{
+        padding: 8px;
+
+        p{
+            font-size: 12px;
+        }
+
+        span{
+            font-size: 8px;
+        }
+
+        h4, .h4{
+            margin-bottom: -5px;
+            font-size: 14px;
+        }
+    }
+}
