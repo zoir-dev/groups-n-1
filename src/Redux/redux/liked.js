@@ -8,7 +8,7 @@ const likedCardsSlice = createSlice({
       state.push(action.payload);
     },
     removeLikedCard: (state, action) => {
-      const index = state.findIndex((id) => id === action.payload);
+      const index = state.findIndex((id) => id.id === action.payload.id);
       if (index !== -1) {
         state.splice(index, 1);
       }

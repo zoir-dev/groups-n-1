@@ -3,15 +3,23 @@ import "./card.scss";
 import { Rated } from "../../UseFull/Rated";
 import { useDispatch, useSelector } from "react-redux";
 import { addLikedCard, removeLikedCard } from "../../Redux/redux/liked";
+import { addProductToBasket } from "../../Redux/redux/basket";
 function Card(c) {
   const stars = Rated(c.c.rated);
   const dispatch = useDispatch();
   const liked = useSelector((state) => state.likedCards);
+  const basket = useSelector((state) => state.basket.basket);
   const LikeButton = () => {
-    if (liked.find((l) => l === c.c.id)) {
-      dispatch(removeLikedCard(c.c.id));
+    if (liked.find((l) => l.id === c.c.id)) {
+      dispatch(removeLikedCard(c.c));
     } else {
-      dispatch(addLikedCard(c.c.id));
+      dispatch(addLikedCard(c.c));
+    }
+  };
+
+  const AddtoBasket = () => {
+    if (!basket.find((l) => l.id === c.c.id)) {
+      dispatch(addProductToBasket(c.c));
     }
   };
   return (
@@ -19,7 +27,7 @@ function Card(c) {
       <div className="img_div">
         <img src={c.c.img} alt="" />
         <div className="card_like_button" onClick={LikeButton}>
-          {liked?.find((l) => l === c.c.id) ? (
+          {liked?.find((l) => l.id === c.c.id) ? (
             <Favorite className="liked_button" />
           ) : (
             <FavoriteBorder />
@@ -48,7 +56,7 @@ function Card(c) {
                 <img key={index} src={`../../../public/assets/${s}.png`} />
               ))}
             </div>
-            <button>В корзину</button>
+            <button onClick={AddtoBasket}>В корзину</button>
           </div>
         </div>
       </div>
