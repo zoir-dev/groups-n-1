@@ -12,30 +12,16 @@ import { IconContext } from "react-icons/lib";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Badge, createTheme } from "@mui/material";
+import { Badge } from "@mui/material";
 
 const Header = () => {
   const [link, setLink] = useState("");
   const atBaskets = useSelector((state) => state.basket.basket);
+  const likedCards = useSelector((state) => state.likedCards);
   const location = useLocation();
   useEffect(() => {
     setLink(location.pathname);
   }, [location.pathname]);
-  useEffect(() => {
-    console.log(atBaskets);
-  }, [atBaskets]);
-
-  const theme = createTheme({
-    components: {
-      MuiBadge: {
-        styleOverrides: {
-          badge: {
-            backgroundColor: "#aaa",
-          },
-        },
-      },
-    },
-  });
 
   return (
     <div id="Header" className="container">
@@ -63,7 +49,14 @@ const Header = () => {
           to="/likeds"
           className={`box-head ${link === "/likeds" && "active_link"}`}
         >
-          <BsHeart className="ic" />
+          <Badge
+            badgeContent={likedCards.length}
+            color="error"
+            max={100}
+            overlap="rectangular"
+          >
+            <BsHeart className="ic" />
+          </Badge>
           <p>Избранное</p>
         </NavLink>
         <NavLink
@@ -81,7 +74,6 @@ const Header = () => {
             badgeContent={atBaskets.length}
             color="error"
             max={100}
-            theme={{ theme }}
             overlap="rectangular"
           >
             <SlBasket className="ic" />
