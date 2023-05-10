@@ -1,0 +1,72 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 24px;
+    background: #F9F4E2;
+    background-image: url(/public/assets/Fotter/pattern2.png);
+    box-sizing: border-box;
+
+        img{
+            cursor: pointer;
+        }
+
+        .first_row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+       
+
+                .left-foot{
+                    width: 65%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                    img{
+                        height: 60px;
+                    }
+                    h3{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+
+                .right-foot{
+                    width: 30%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    img{
+                        height: 30px;
+                    }
+                    .lr-foot{
+                        width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+    
+                    .rr-foot{
+                        width: 41%;
+                        gap: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
+        }
+        .second_row{
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            gap: 10px;
+            img{
+                object-fit: contain;
+                height: 10px;
+            }
+        }
+}

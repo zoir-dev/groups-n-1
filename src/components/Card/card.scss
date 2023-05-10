@@ -139,11 +139,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-
-        &:only-child{
-            margin-bottom: 20px !important;
-            color: red;
-        }
+        height: 50px;
     }
 
     .rated_div{
@@ -184,9 +180,12 @@
     .card_body{
         padding: 8px;
 
-        p{
+       .card_body_main{
+            p{
             font-size: 12px;
+            height: 40px;
         }
+       }
 
         span{
             font-size: 8px;

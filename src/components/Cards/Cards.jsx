@@ -14,7 +14,7 @@ function Cards({ cards_title, cards, cards_all }) {
       </div>
       <div className="cards">
         {cards.map((c) => (
-          <Card c={c} key={c.id} />
+          <Card data={c} key={c.id} />
         ))}
       </div>
     </div>
