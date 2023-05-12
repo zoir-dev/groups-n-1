@@ -1,0 +1,56 @@
+.xarita_div {
+  .title-xarita {
+    h2 {
+      font-size: 36px;
+    }
+  }
+  .navigation-xarita {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    .nav-btn-map {
+      padding: 11px;
+      display: flex;
+      border: none;
+      border-radius: 4px;
+      gap: 8px;
+      background: #f3f2f1;
+      margin-right: 24px;
+      color: #606060;
+      cursor: pointer;
+    }
+    .nav-btn-map.active {
+      background: #70c05b;
+      color: #ffffff;
+    }
+  }
+  .map-xarita{
+    width: 100%;
+    position: relative;
+    // overflow: hidden;
+    .mapp{
+      height: 354px;
+    }
+    .ymaps-2-1-79-map{
+      position: absolute !important;
+      &:first{
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width:400px){
+  .xarita_div{
+        .navigation-xarita{
+          display: grid;
+          grid-template-columns: repeat(2,minmax(0,1fr));
+          gap: 20px;
+
+            .nav-btn-map{
+              width: min-content;
+            }
+        }
+  }
+  
+}

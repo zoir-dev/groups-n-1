@@ -94,11 +94,14 @@
             background: rgba(112, 192, 91, 1);
             display: flex;
             justify-content: space-between;
-            border-radius: 4px;
             align-items: center;
+            border-radius: 4px;
             padding: 2%;
             color: white;
             border: none;
+            span{
+                height: 18px;
+            }
         
             h1{
                 font-size: 18px;

@@ -45,7 +45,6 @@ const Header = () => {
       </div>
       <div className="right-head">
         <NavLink
-          exact
           to="/likeds"
           className={`box-head ${link === "/likeds" && "active_link"}`}
         >

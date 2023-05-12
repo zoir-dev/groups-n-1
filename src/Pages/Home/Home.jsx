@@ -1,5 +1,7 @@
+import Articles from "../../components/Articles/Articles";
 import Cards from "../../components/Cards/Cards";
 import HomeSlider from "../../components/HomeSlider/HomeSlider";
+import Map from "../../components/Map/Map";
 import { cards_discount, cards_new, cards_popular } from "../../Data/index";
 import "./home.scss";
 function Home() {
@@ -13,6 +15,8 @@ function Home() {
         cards_all="Все покупки"
         cards={cards_popular}
       />
+      <Articles />
+      <Map />
     </div>
   );
 }
