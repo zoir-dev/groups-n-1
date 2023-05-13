@@ -1,5 +1,7 @@
 .Footer{
     display: flex;
+    position: absolute;
+    bottom: 0;
     flex-direction: column;
     gap: 10px;
     width: 100%;

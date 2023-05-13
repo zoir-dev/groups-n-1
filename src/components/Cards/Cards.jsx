@@ -1,6 +1,7 @@
 import { ArrowForwardIos } from "@mui/icons-material";
 import Card from "../Card/Card";
 import "./cards.scss";
+import Article from "../Article/Article";
 
 function Cards({ cards_title, cards, cards_all }) {
   return (
@@ -12,11 +13,19 @@ function Cards({ cards_title, cards, cards_all }) {
           <ArrowForwardIos />
         </button>
       </div>
-      <div className="cards">
-        {cards.map((c) => (
-          <Card data={c} key={c.id} />
-        ))}
-      </div>
+      {cards.length === 3 ? (
+        <div className="articles">
+          {cards.map((c) => (
+            <Article data={c} key={c.id} />
+          ))}
+        </div>
+      ) : (
+        <div className="cards">
+          {cards.map((c) => (
+            <Card data={c} key={c.id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import "./style.scss";
 
-const Articles = () => {
+const Apps = () => {
   return (
     <div className="container apps_div">
       <div className="title-apps">
@@ -28,4 +28,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Apps;

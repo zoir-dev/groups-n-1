@@ -18,6 +18,9 @@
   box-sizing: border-box;
   transition: 0.3s ease all;
 }
+*::selection{
+  background-color: #FF6633;
+}
 button{
   cursor: pointer;
 }

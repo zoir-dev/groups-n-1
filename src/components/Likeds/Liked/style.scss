@@ -1,0 +1,139 @@
+.Liked_div{
+    margin-top: 27px;
+    padding-bottom: 80px;
+
+    h1{
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 150%;
+        padding-bottom: 60px;
+    }
+    .filter_div{
+        h4{
+            font-size: 16px;
+            background: #F3F2F1;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+        .filter_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            button{
+                font-size: 12px;
+                line-height: 150%;
+                background-color: #F3F2F1;
+                padding: 4px 8px;
+                border: none;
+                border-radius: 4px;
+                color: #606060;
+            }
+        }
+    }
+    .likeds_div{
+        display: flex;
+        gap: 40px;
+    
+            .liked_div{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .liked_divs{
+                    display: grid;
+                    grid-template-columns: repeat(4,minmax(0,1fr));
+                    gap: 40px;
+                }
+                .pagination_div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px;
+                    .watch_all{
+                        font-size: 24px;
+                        line-height: 150%;
+                        color: #606060;
+                        background: #F3F2F1;
+                        border-radius: 4px;
+                        border: none;
+                        padding: 14px 18px;
+                    }
+                }
+            }
+            .filter_buttons{
+                display: flex;
+                height: 40px;
+                gap: 20px;
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                        gap: 13px;
+                        padding: 8px;
+                        background: #F3F2F1;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        
+                        svg{
+                            font-size: 20px;
+                            color: #414141;
+                        }
+                        &:hover{
+                            background-color: #70C05B;
+                            color: white;
+                        }
+                    &:first-child{
+                        display: none;
+                        padding: 8px 24px;
+                        background-color: #70C05B;
+                        color: #FFFFFF;
+                    }
+                    }
+            }
+    }
+
+}
+
+@media screen and (max-width:1400px){
+   .Liked_div .likeds_div .liked_div .liked_divs{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 32px;
+    }
+}
+@media screen and (max-width:1100px){
+    .Liked_div h1{
+        font-size: 50px;
+    }
+    .filter_div{
+        display: none;
+    }
+    .Liked_div .likeds_div .filter_buttons {
+        div:first-child{
+            display: flex;
+        }
+    }
+}
+@media screen and (max-width:900px){
+    .Liked_div h1{
+        font-size: 43px;
+        padding-bottom: 50px;
+    }
+}
+@media screen and (max-width:650px){
+    .Liked_div h1{
+        font-size: 36px;
+        padding-bottom: 40px;
+    }
+    .Liked_div .likeds_div .liked_div .liked_divs{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 16px;
+    }
+}
+@media screen and (max-width:500px){
+    .Liked_div .likeds_div .filter_buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+}

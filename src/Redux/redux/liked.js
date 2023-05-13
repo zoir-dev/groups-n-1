@@ -13,9 +13,13 @@ const likedCardsSlice = createSlice({
         state.splice(index, 1);
       }
     },
+    removeAllLikedCards: (state) => {
+      state.splice(0, state.length);
+    },
   },
 });
 
-export const { addLikedCard, removeLikedCard } = likedCardsSlice.actions;
+export const { addLikedCard, removeLikedCard, removeAllLikedCards } =
+  likedCardsSlice.actions;
 
 export default likedCardsSlice.reducer;

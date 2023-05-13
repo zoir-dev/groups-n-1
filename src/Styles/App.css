@@ -1,3 +1,10 @@
+.App{
+    position: relative;
+    min-height: 100vh;
+}
+.main{
+    padding-bottom: 126px;
+}
 .container{
     padding: 0 180px;
 }
