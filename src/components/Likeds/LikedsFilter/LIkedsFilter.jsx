@@ -1,7 +1,6 @@
 import { Slider } from "@mui/material";
 import IosSwitch from "../IosSwitch/IosSwitch";
 import { Remove } from "@mui/icons-material";
-import { useState } from "react";
 import "./style.scss";
 
 const LIkedsFilter = ({
@@ -11,8 +10,9 @@ const LIkedsFilter = ({
   setFilter_sum,
   setFiltered,
   setOpen,
+  cash,
+  setCash,
 }) => {
-  const [cash, setCash] = useState(true);
   const handleChangeMin = (e) => {
     setVal((val) => [e.target.value, val[1]]);
   };
@@ -25,15 +25,17 @@ const LIkedsFilter = ({
     setFilter_sum(val);
     setFiltered(
       likeds
+        .filter((l) => {
+          if (val[0] <= l.cost_cash && l.cost_cash <= val[1]) return l;
+        })
         .filter((s) => {
           if (cash && !s.cost_card) return s;
           if (!cash) return s;
         })
-        .filter((l) => {
-          if (val[0] <= l.cost_cash && l.cost_cash <= val[1]) return l;
-        })
     );
-    setOpen(false);
+    {
+      setOpen && setOpen(false);
+    }
   };
 
   return (

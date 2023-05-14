@@ -11,6 +11,8 @@ const LikedsModal = ({
   likeds,
   setFilter_sum,
   setFiltered,
+  cash,
+  setCash,
 }) => {
   return (
     <Modal open={open}>
@@ -27,6 +29,8 @@ const LikedsModal = ({
             setFilter_sum={setFilter_sum}
             setFiltered={setFiltered}
             setOpen={setOpen}
+            cash={cash}
+            setCash={setCash}
           />
         </div>
       </div>

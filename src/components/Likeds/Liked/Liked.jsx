@@ -15,6 +15,8 @@ const Liked = ({
   setFiltered,
   val,
   setVal,
+  cash,
+  setCash,
 }) => {
   const [cur_p, setCur_p] = useState(1);
   const [per_p, setPer_p] = useState(8);
@@ -91,6 +93,8 @@ const Liked = ({
         likeds={likeds}
         setFilter_sum={setFilter_sum}
         setFiltered={setFiltered}
+        cash={cash}
+        setCash={setCash}
       />
     </div>
   );

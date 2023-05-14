@@ -9,12 +9,12 @@ const Likeds = () => {
 
   const [filter_sum, setFilter_sum] = useState([0, 0]);
   const [filtered, setFiltered] = useState([]);
+  const [cash, setCash] = useState(true);
 
   const likeds = useSelector((state) => state.likedCards);
 
   const clearFilter = () => {
     setVal([0, 100]);
-    // cancelFilter();
   };
   return (
     <div className="container Liked_div">
@@ -32,16 +32,20 @@ const Likeds = () => {
             likeds={likeds}
             setFilter_sum={setFilter_sum}
             setFiltered={setFiltered}
+            cash={cash}
+            setCash={setCash}
           />
         </div>
         <Liked
           filter_sum={filter_sum}
-          filtered={filtered}
           setFilter_sum={setFilter_sum}
+          filtered={filtered}
           setFiltered={setFiltered}
           likeds={likeds}
           val={val}
           setVal={setVal}
+          cash={cash}
+          setCash={setCash}
         />
       </div>
     </div>
