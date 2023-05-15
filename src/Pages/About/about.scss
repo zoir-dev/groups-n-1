@@ -1,0 +1,21 @@
+.about_div {
+  display: flex;
+  flex-flow: column;
+  gap: 120px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 85px;
+}
+@media screen and (max-width: 845px) {
+  .about_div {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 40px;
+    .end {
+      width: 100%;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+// Max width : 2370px
+
+.card-vac {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  background: #ffffff;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 32px;
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #414141;
+  }
+  .mail {
+    label {
+      font-size: 18px;
+      font-weight: 400;
+      color: #414141;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #414141;
+      margin-top: 6px;
+    }
+  }
+  .phone-vac {
+    p {
+      font-size: 18px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      text-decoration: underline;
+      svg {
+        transform: rotateY(180deg);
+        font-size: 26px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+//  ===== Media section =====
+
+
+
+@media screen and (max-width: 310px) {
+  .card-vac {
+    h3 {
+      font-size: 22px;
+    }
+    .mail {
+      label {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    .phone-vac {
+      p {
+        font-size: 14px;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        svg {
+          transform: rotateY(180deg);
+          font-size: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+// Min width : 205px
+
+// ===== End of media and syle =======

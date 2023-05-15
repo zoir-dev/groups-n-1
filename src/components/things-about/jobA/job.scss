@@ -1,0 +1,155 @@
+// Max width : 2370px
+.job_div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  .tip {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    .text-tip {
+      position: relative;
+      h3 {
+        font-size: 20px;
+        color: #414141;
+        font-weight: 400;
+        margin-left: 5px;
+      }
+      span {
+        position: absolute;
+        left: -30px;
+        padding: 5px;
+        background: #fcd5ba;
+        height: 30px;
+        border-radius: 90% 32% 67% 41% / 51% 55% 45% 62%;
+        color: #ff6633;
+      }
+      h2 {
+        font-size: 24px;
+        font-size: 24px;
+        color: #414141;
+        font-weight: 700;
+      }
+    }
+  }
+  // .type1 {
+  //   width: 300px;
+  // }
+  // .type2 {
+  //   width: 350px;
+  // }
+  // .type3 {
+  //   width: 420px;
+  // 
+}
+
+// ====== Media section =======
+
+@media screen and (max-width: 1735px) {
+  .job_div {
+    display: flex;
+    flex-flow: row;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .job_div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    .type3 {
+      width: 400px;
+      h2 {
+        width: 770px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 845px) {
+  .job_div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    margin-left: 50px;
+    .type3 {
+      width: 400px;
+      h2 {
+        width: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .job_div {
+    margin-left: 30px;
+    .tip {
+      display: flex;
+      flex-flow: column;
+      .text-tip {
+        h3 {
+          font-size: 14px;
+          color: #414141;
+          font-weight: 400;
+        }
+        h2 {
+          font-size: 16px;
+          color: #414141;
+          font-weight: 700;
+        }
+      }
+    }
+    .type1 {
+      width: 250px;
+    }
+    .type2 {
+      width: 300px;
+    }
+    .type3 {
+      width: 300px;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .job_div {
+    margin-left: 15px;
+    .text-tip {
+      position: relative;
+      margin-left: 5px;
+    }
+  }
+}
+@media screen and (max-width: 290px) {
+  .job_div {
+    margin-left: 15px;
+    .tip {
+      display: flex;
+      flex-flow: column;
+      .text-tip {
+        h3 {
+          font-size: 14px;
+          color: #414141;
+          font-weight: 400;
+        }
+        h2 {
+          font-size: 16px;
+          color: #414141;
+          font-weight: 700;
+        }
+      }
+    }
+    .type1 {
+      width: 200px;
+    }
+    .type2 {
+      width: 200px;
+    }
+    .type3 {
+      width: 200px;
+    }
+  }
+}
+
+// ====== Min width : 220px
+
+// ===== End of media and style =====

@@ -1,0 +1,125 @@
+// Max width : 2370
+.hAbout_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .left-section-a {
+    h2 {
+      font-size: 64px;
+      line-height: 96px;
+      color: #414141;
+    }
+    p {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: #ff6633;
+    }
+  }
+  .right-section-a {
+    img {
+      width: 800px;
+      background: url(../../../public/assets/About/Vector.png);
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+  }
+}
+// ====== Media section =======
+
+@media screen and (max-width: 1735px) {
+  .hAbout_div {
+    .left-section-a {
+      width: 50%;
+    }
+    .right-section-a img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1210px) {
+  .hAbout_div {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    .left-section-a {
+      width: 100%;
+    }
+    .right-section-a {
+      width: 100%;
+    }
+  }
+}
+// @media screen and (max-width: 700px) {
+//   .hAbout_div {
+//     .left-section-a {
+//       width: 500px;
+//     }
+//     .right-section-a img {
+//       width: 550px;
+//     }
+//   }
+// }
+@media screen and (max-width: 560px) {
+  .hAbout_div {
+    .left-section-a {
+      width: 100%;
+      h2 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .right-section-a img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 410px) {
+  .hAbout_div {
+    .left-section-a {
+      // width: 370px;
+      h2{
+        font-size: 36px;
+      }
+      p{
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    // .right-section-a img {
+    //   width: 370px;
+    // }
+  }
+}
+@media screen and (max-width: 380px) {
+  .hAbout_div {
+    .left-section-a {
+      width: 100%;
+    }
+    .right-section-a img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 280px) {
+  .hAbout_div {
+    .left-section-a {
+      h2 {
+        font-size: 40px;
+        line-height: 38px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 34px;
+      }
+    }
+    
+  }
+}
+
+// Min width : 210px
+// ======= End of Media and style ======

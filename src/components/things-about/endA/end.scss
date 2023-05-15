@@ -1,0 +1,99 @@
+// Max width : 2370px
+
+.end_div {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  .text-end {
+    margin-left: 100px;
+    background: #e5ffde;
+    padding: 20px 40px 20px 40px;
+    border-radius: 8px;
+    color: #70c05b;
+    font-size: 24px;
+  }
+}
+
+// ====== Media section ======
+
+@media screen and (max-width: 1390px) {
+  .end_div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    .text-end {
+      width: 605px;
+      margin-left: 100px;
+      background: #e5ffde;
+      padding: 20px 40px 20px 40px;
+      border-radius: 8px;
+      color: #70c05b;
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .end_div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .text-end {
+      width: 605px;
+      margin-left: 0;
+      margin-top: 20px;
+      background: #e5ffde;
+      padding: 20px 40px 20px 40px;
+      border-radius: 8px;
+      color: #70c05b;
+      font-size: 24px;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .end_div {
+    .text-end {
+      width: 350px;
+      margin-left: 0;
+      margin-top: 20px;
+      background: #e5ffde;
+      padding: 20px 40px 20px 40px;
+      border-radius: 8px;
+      color: #70c05b;
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 310px) {
+  .end_div {
+    .text-end {
+      width: 250px;
+      margin-left: 0;
+      margin-top: 20px;
+      background: #e5ffde;
+      padding: 20px 40px 20px 40px;
+      border-radius: 8px;
+      color: #70c05b;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .end_div {
+    .text-end {
+      width: 200px;
+      margin-left: 0;
+      margin-top: 20px;
+      background: #e5ffde;
+      padding: 20px 40px 20px 40px;
+      border-radius: 8px;
+      color: #70c05b;
+      font-size: 14px;
+    }
+  }
+}
+
+// Min width : 210px
+
+// ==== End of media and style ======
