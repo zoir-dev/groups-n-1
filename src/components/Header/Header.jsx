@@ -4,6 +4,7 @@ import { BsBoxSeam } from "react-icons/bs";
 import { SlMenu } from "react-icons/sl";
 import { SlBasket } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
+import logo2 from "../../../public/assets/Header/logo2.svg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import avatar from "../../../public/assets/Header/avatar.svg";
 
@@ -26,7 +27,8 @@ const Header = () => {
   return (
     <div id="Header" className="container">
       <div className="left-head">
-        <img src={logo} alt="logo" />
+        <img className="f-logo" src={logo2} alt="" />
+        <img className="s-logo" src={logo} alt="logo" />
         <h1>Северяночка</h1>
       </div>
       <div className="center-head">
@@ -84,7 +86,7 @@ const Header = () => {
         <div className="avatar">
           <img src={avatar} alt="avatar" />
           <h2>Алексей</h2>
-          <KeyboardArrowDownIcon />
+          <KeyboardArrowDownIcon className="keyicon" />
         </div>
       </div>
     </div>

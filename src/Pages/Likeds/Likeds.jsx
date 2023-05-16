@@ -1,4 +1,5 @@
 import Liked from "../../components/Likeds/Liked/Liked";
+import "./style.scss";
 
 import { useState } from "react";
 import { useSelector } from "react-redux";

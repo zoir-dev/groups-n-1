@@ -6,11 +6,13 @@
     padding-bottom: 126px;
 }
 .container{
+
     padding: 0 180px;
+
 }
 @media screen and (max-width:1440px){
     .container{
-        padding: 0 116px;
+        padding: 0 100px;
     }
 }
 @media screen and (max-width:1000px){

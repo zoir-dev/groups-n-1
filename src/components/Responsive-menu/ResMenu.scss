@@ -1,0 +1,103 @@
+.footer-nav{
+    display: none;
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    .footer-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #414141;
+
+        &:hover{
+            color: #FF6633;
+        }
+        img{
+            margin: 0%;
+            height: 60px;
+            padding: 0%;
+            object-fit: cover;
+        }
+        .ic2{
+           font-size: 30px;
+        }
+        h1{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .MuiBadge-badge {
+            background-color: #FF6633 !important;
+            border-radius: 4px;
+            // width: 8px;
+            padding: 0;
+            min-width: 15px !important;
+            height: 15px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 5px !important;
+        }
+        
+    }
+    .active_link{
+        color: #FF6633;
+    }
+  
+}
+@media (max-width:580px) {
+    .footer-nav{
+        display: flex;
+        .footer-box{
+           
+            img{
+                height: 50px;
+            }
+            .ic2{
+               font-size: 24px;
+            }
+            h1{
+                font-size: 14px;
+                font-weight: 400;
+            }
+    
+        }
+    }
+    
+}
+@media (max-width:400px) {
+
+    .footer-nav{
+        width: 100%;
+        height: 85px;
+        object-fit: cover;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .footer-box{
+            align-items: center;
+            gap: 8px;
+            img{
+                height: 40px;
+            }
+            .ic2{
+               font-size: 20px;
+            }
+            h1{
+                font-size: 10px;
+                font-weight: 400;
+            }
+    
+        }
+      
+    }
+    
+}

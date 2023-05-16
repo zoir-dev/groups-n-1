@@ -54,7 +54,6 @@ const IOSSwitch = styled((props) => (
   },
 }));
 export default function IosSwitch({ value, setValue }) {
-  console.log(value);
   return (
     <FormGroup>
       <FormControlLabel

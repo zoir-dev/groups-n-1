@@ -5,19 +5,28 @@ import wk from "../../../public/assets/Fotter/vk.png";
 import odno from "../../../public/assets/Fotter/odnoklassniki.png";
 import phone from "../../../public/assets/Fotter/telephone.png";
 
+
+
 import "./Footer.scss";
+import ResMenu from "../Responsive-menu/ResMenu";
 
 const Footer = () => {
   return (
-    <div className="container Footer">
+    <>
+    <div id="Footer" className="container">
       <div className="first_row">
+        <img src={logo2} alt="logo" />
+
         <div className="left-foot">
-          <img src={logo2} alt="logo" />
-          <h3>О компании</h3>
-          <h3>Контакты</h3>
-          <h3>Вакансии</h3>
-          <h3>Статьи</h3>
-          <h3>Политика обработки персональных данных</h3>
+          <div className="h3">
+
+            <h3>О компании</h3>
+            <h3>Контакты</h3>
+            <span className="nth"><h3>Вакансии</h3> </span>
+            <h3>Статьи</h3>
+            <h3>Политика обработки персональных данных</h3>
+          </div>
+
         </div>
         <div className="right-foot">
           <div className="lr-foot">
@@ -30,13 +39,18 @@ const Footer = () => {
             <img src={phone} alt="" />
             <h4>8 800 777 33 33</h4>
           </div>
+
         </div>
+       
+  
+
       </div>
-      <div className="second_row">
-        <p>Дизайн</p>
-        <img src="../../../public/assets/Fotter/logo_zagovskiy.png" alt="" />
-      </div>
-    </div>
+
+
+    </div >
+    <ResMenu/>
+    </>
+    
   );
 };
 export default Footer;
